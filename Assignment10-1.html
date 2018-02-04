@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+function updateTextInput(val){
+  document.getElementById('textInput').value=val;
+}
+</script>
+</head>
+<body>
+
+<form action="http://x15.dk/hitme.php">
+  <div id="date">
+    <label>Enter your Birthday</label>
+    <input name="bday" type="date" required/>
+  </div>
+  <div id="slider">
+    <label>Enter amount</label>
+    <input type="range" name="rangeInput" min="-278" max="6000" onchange="updateTextInput(this.value);" required>
+    <input type="number" id="textInput" readonly value=""/>
+  </div>
+  <div id="num">
+    <label>Enter number</label>
+    <input name="number" type="number" min="0" max="100" required>
+  </div>
+  <input type="submit">
+</form>
+
+</body>
+</html>
